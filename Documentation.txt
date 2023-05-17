@@ -1,0 +1,444 @@
+				
+				------------------------------- 1] WORKING ---------------------------------
+
+
+
+	A] PATIENTS:
+			On the first page, the patinets can create an accouunt(registration),login their account and forgot password.
+		   LOGIN:
+
+		    * Patients Dashboard:
+	
+			   i] Update profile 	
+						Update email	
+			   ii] My Appointments
+			   iii] Book My Appointment
+
+		   * LEFT NAVIGATION:
+
+			   i] Dashboard
+			   ii] Book Appointment
+			   iii] Appointment History		
+			   iv] Medical History	
+
+		   * RIGHT NAVIGATION:
+			   
+			    i] My profile
+			    ii] Change Password 
+			    iii] Log Out
+						
+	   B] DOCTORS:
+			On the first page, the doctors can login their account and forgot password.	
+		   LOGIN:
+			   * Doctors Dashboard 
+			         (My profile , Change Password , Log out , Dashboard)
+			           Doctors cannot register their self only manager can do it after the manager registration they give id and password to the doctor
+
+			    i] Update Profile
+			    ii] My Appointments
+		
+			   * LEFT NAVIGATION:
+
+			    i] Dashboard
+			    ii] Appointment History
+			    iii] Patients
+					  	a] Add patients
+							* Check Email Available Fir Registration
+						b] Manage patients			
+							Edit Patients 
+							View Patients 
+			    iv] Search
+		
+			   * RIGHT NAVIGATION:
+			   
+			    i] My profile
+			    ii] Change Password 
+			    iii] Log Out
+						
+	    C] MANAGER :
+			On the first page, the manager can login their account.
+		   LOGIN:
+			    Manager Dashboard
+				(Change Password , Log out , Dashboard)
+
+			    i] Manage Users		
+			    ii] Manage Doctors   	
+			    iii] Appointments				
+			    iv] Manage Patients	
+			    v] New Queries
+			    vi] Doctors:
+						a] Doctors Specialization						
+						b] Add Doctors						 
+						c] Manage Doctors					
+			    vii] Users:
+						a] Manage Users					
+			    viii] Patients:
+						a] Manage Patients			
+			    ix] Appointments History			
+			    x] Contactus Queries:
+						a] Unread Query
+						b] Read Query				
+			    xi] Doctor Session Logs
+			    xii] User Session Logs
+						
+			    xiii] Reports:
+						a] B/W Dates Reports			
+			    xiv] Patient Search
+						
+				
+	    D] CONTACT
+
+			  
+
+				-------------------------------2] FLOW ---------------------------------
+
+
+
+			
+							localhost/hospital/index.php
+
+					A] Patients Login :- localhost/hospital/hms/user-login.php	
+					B] Doctors Login :- localhost/hospital/hms/doctor/index.php
+					C] Admin Login :- localhost/hospital/hms/admin/index.php
+					D] Contact :- localhost/hospital/contact.php
+
+      A] Patients Login :- localhost/hospital/hms/user-login.php 
+	
+		   1] Forgot Password
+		   2] Create An Account
+		   3] Login
+			
+	1] Forgot Password :-				   2] Create An Account :-			  3] Login :-
+	localhost/hospital/hms/forgot-password.php	   localhost/hospital/hms/registration.php  	   localhost/hospital/hms/dashboard.php
+											 
+	Reset Password:											 * Dahboard :
+		localhost/hospital/hms/forgot-password.php							i] Update Profile :-  
+															localhost/hospital/hms/edit-profile.php	
+													
+															Update email:
+																localhost/hospital/hms/change-emaild.php					
+															
+														ii] My Appointments :-
+															localhost/hospital/hms/appointment-history.php (cancel)
+
+														iii] Book My Appointment :-
+															localhost/hospital/hms/book-appointment.php
+						
+													* LEFT NAVIGATION:
+
+			   											i] Dashboard: 
+															localhost/hospital/hms/dashboard.php
+			
+			   											ii] Book Appointment: 
+															 localhost/hospital/hms/book-appointment.php
+			
+			   											iii] Appointment History: 
+															 localhost/hospital/hms/appointment-history.php
+						
+			   											iv] Medical History:  
+															 localhost/hospital/manage-medhistory.php
+
+																View MedicalHistory:
+																	localhost/hospital/hms/view-medhistory.phps
+
+		   											* RIGHT NAVIGATION:
+			   
+			    											i] My profile : 
+															 localhost/hospital/hms/edit-profile.php
+			   
+			    											ii] Change Password : 
+															 localhost/hospital/hms/change-password.php
+			
+			    											iii] Log Out: 
+															 localhost/hospital/hms/logout.php
+														
+     B] Doctors Login :-  localhost/hospital/hms/doctor/index.php
+		
+		1] Forgot Password
+		2] Login 
+	
+	1] Forgot Password :-				    		    2] Login :-
+	localhost/hospital/hms/doctor/forgot-password.php		     localhost/hospital/hms/doctor/dashboard.php
+										
+										* Dashboard
+
+										i] My Profile :-
+											localhost/hospital/hms/doctor/edit-profile.php
+
+										ii] View Appointments History :-
+											localhost/hospital/hms/doctor/appointment-history.php (cancel)
+											
+										
+										* Left Nevigation:
+											
+										i] Dashboard :		
+											localhost/hospital/hms/doctor/dashboard.php
+
+										ii] Appointment History:								
+											ocalhost/hospital/hms/doctor/appointment-history.php
+
+										iii] Patients :-
+											i] Add Patients :-
+													localhost/hospital/hms/doctor/add-patient.php
+												* Check Email Available For Registration:
+													localhost/hospital/hms/doctor/check-availability.php
+
+											ii] Manage Patients :-
+													localhost/hospital/hms/doctor/manage-patient.php
+												Edit Patients :
+													localhost/hospital/hms/doctor/edit-patient.php
+												View Patients :
+													localhost/hospital/hms/doctor/view-patient.php
+
+										iv] Search :-
+											localhost/hospital/hms/doctor/search.php
+
+										* RIGHT NAVIGATION:
+			   
+			    							i] My profile : 
+											localhost/hospital/doctors/edit-profile.php
+			   
+			    							ii] Change Password : 
+											localhost/hospital/doctors/change-password.php
+			
+			    							iii] Log Out: 
+											localhost/hospital/doctors/logout.php
+										
+     C] Admin Login :- localhost/hospital/hms/admin/index.php
+
+	1] Login :- 
+	localhost/hospital/hms/admin/dashboard.php
+	
+		i] Manage Users :-
+			localhost/hospital/hms/admin/manage-users.php
+
+		ii] Manage Doctors :-
+			localhost/hospital/hms/admin/manage-doctors.php
+			
+		iii] Appointments :-
+			localhost/hospital/hms/admin/appointments-history.php
+
+		iv] Manage Patients :-
+			localhost/hospital/hms/admin/manage-patients.php
+
+		v] New Queries :-
+			localhost/hospital/hms/admin/unread-queries.php
+
+		vi] Doctors :-
+
+			a] Doctors Specialization :-
+					localhost/hospital/hms/admin/doctors-specialization.php
+			b] Add Patients :-
+					localhost/hospital/hms/admin/add-doctors.php
+			c] Manage Doctors :-
+					localhost/hospital/hms/admin/manage-doctors.php
+
+		vii] Users :-
+			
+			a] Manage Users :-
+					localhost/hospital/hms/admin/manage-users.php
+
+		viii] Patients :-
+
+			a] Manage Patients :-
+					localhost/hospital/hms/admin/manage-patient.php
+
+		ix] Appointment History :-
+			localhost/hospital/hms/admin/appointment-history.php
+
+		x] Contactus Queries :-
+			
+			a] Unread Query :-
+					localhost/hospital/hms/admin/unread-queries.php
+			b] Read Query :-
+					localhost/hospital/hms/admin/read-query.php
+
+		xi] Doctors Session Logs :-
+			localhost/hospital/hms/admin/doctor-logs.php
+
+		xii] Users Session Logs :-
+			localhost/hospital/hms/admin/user-logs.php
+
+		xiii] Report :-
+			localhost/hospital/hms/admin/between-dates-report.php
+
+		xiv] Patients Search :-
+			localhost/hospital/hms/admin/patient-search.php
+
+	D] Contact :- localhost/hospital/contact.php
+
+
+
+
+	
+														
+				----------------------------------------- Deatils ----------------------------------------------
+
+
+
+
+Hms folder-------A] PATIENTS:
+			On the first page, the patinets can create an accouunt(registration),login their account with (Username and password) and forgot password.
+					
+					Registration: In the registration user can fill their Personal details ( Full name , Address , City , Gender )and Account Deatils ( Email , Password , Confirm Password).
+					Forgot Password: In the Password Rcovery user have to enter their registration name and registration email.
+					Reset Password: Their they have ti entire their password.
+	
+		   LOGIN: 
+			    Patients Dashboard
+
+					 i] Update profile
+					 ii] My Appointments
+					 iii] Book My Appointment
+					 iv] Medical History
+					 v] Change Password
+	
+			   i] Update profile:
+						If Patients wants to update their profile they can use the update profile.
+						They can update name,address,city,gender,email.
+
+					* Update Email: In these Pattients can update their email.
+	
+			   ii] My Appointments:
+						In the appointments patients can see their appointment history and aslo they can cancel their 
+						appointment.
+			   
+			   iii] Book My Appointment:
+						In the book my appointment patients can book their appointment. 
+						They can choose the Doctor specialization(eg. Gynecologist),Doctors Name,
+						Consultancy fees (Consultancy fees is automatic entered because we chooce the doctors name and 
+						doctors entered their consultancy fees during the registration),Date,Time.
+
+			   iv] Medical History:
+						In these they can see their medical history with last time report.
+					View Medical History: In these the patients can see their medical report.
+
+			   v] Change Password:
+						If they want to change their password they can choose change password.
+						First they have to enter their current password,new password and confirm password.
+
+Doctors Folder-----B] DOCTORS:
+
+			On the first page, the doctors can login their account and forgot password.
+	
+		   LOGIN:
+
+			    Doctors Dashboard 
+			      (My profile , Change Password , Log out , Dashboard)
+			    Doctors cannot register their self only manager can do it after the manager registration they give id and password to the doctor
+
+			    i] Update Profile:
+						If doctors wants to update their profile they can use the update profile.
+						They can update doctors sepcialization,Doctors Name,Clinic address,Doctor consultancy fees,
+						Doctors Contact No,Doctor Email.
+
+			    ii] My Appointments:
+						View appointmemt history
+						In these doctors can see their appointments. In which doctors can see the patients name,
+						specialization,appointment date/time,appointment creation date/time,current status,
+						action ( in which the doctor can cancle the appointment).
+
+			    iii] Patients:
+						a] Add patients:
+								The doctor can add the patients information.i.e patient name,patient contact no.,
+								patient email,gender,patient address,patient age,medical history. 
+								After adding the patients the data of that patients goes in the data base table i.e tblpatients.
+								When user register them self it will not goes in the patinets table it goes in the users table.
+							Check The Email Available :
+								These is check the email is available for registration or not or it allready exits.
+
+						b] Manage patients:
+								In these the doctor can manage the patients information . 
+								Doctor can edit the patients information and view the patients medical history
+							 	and also add the new information to the patients medical history(prescription).
+ 
+			    iv] Search:
+						Doctor can search the patients by Name and email. 
+						After the search the result is shown in these form i.e patient name , patient contact no., 
+						patient gender, creation date , updation date , action(edit/view).
+
+Admin folder-----C] MANAGER :
+
+			On the first page, the manager can login their account.
+
+		   LOGIN:
+			    Manager Dashboard
+				(Change Password , Log out , Dashboard)
+			    i] Manage Users:
+			    			Manager can manager the users when they registered them self they entered in the manager user 
+						their manager can also delete the user data after that user cannot login their self.
+
+			    ii] Manage Doctors:
+					    	In these the manager can manage the doctors information . 
+					    	Manager can edit and delete the doctors information.
+						The information is in the form of specialization, Doctor Name, Create date, action(edit/delete).
+
+			    iii] Appointments:
+						The manager can see the appointments that are booked by users and doctors. 
+						The information is shown in the from of Doctor name, patient name, specialization,consultancy fee,
+						appointment date/time, appointment creation date,current status(it shows that the appointments are 
+						active or cancle (if canclization is done by doctor then it shows that cancle by doctor else it 
+						shows that cancle by users),Action(cancled / Not Action yet). 
+						
+			    iv] Manage Patients:
+						In these the Manager can manage the patients information.Manager can view the patients medical history.
+						Doctors can edit patients information
+
+			    v] New Queries:
+						In these the manager can see the messages(queries) from users.Manager can reply to these messages throgh admin remark.
+	
+			    vi] Doctors:
+						a] Doctors Specialization:
+								In the doctors specialization the manager can add the new doctor specialist.
+								Also edit and delete the old specialists information.
+								The information is shown in the from of #,specialization,creation date ,updation date, Action(edit/delete).
+
+						b] Add Doctors:
+								In these the manager can add the doctors with their specialization,Name,
+								clinic address,consultancy fees,contact no,email,password,confirm password.
+								The doctors can not registers their self only manager can do it after the add 
+								information of doctors the manager can share the id and password to the doctors.
+								
+						c] Manage Doctors:
+								In these the manager can manage the doctors information . 
+					    			Manager can edit and delete the doctors information.
+								The information is in the form of specialization, Doctor Name, Create date, action(edit/delete).
+			    vii] Users:
+						a] Manage Users:
+								Manager can manager the users when they registered them self they entered in the manager user 
+								their manager can also delete the user data after that user cannot login their self.
+								
+			    viii] Patients:
+						a] Manage Patients:
+								In these the Manager can manage the patients information.Manager can view the patients medical history.
+			    ix] Appointments History:
+						The manager can see the appointments that are booked by users and doctors. 
+						The information is shown in the from of Doctor name, patient name, specialization,consultancy fee,
+						appointment date/time, appointment creation date,current status(it shows that the appointments are 
+						active or cancle (if canclization is done by doctor then it shows that cancle by doctor else it 
+						shows that cancle by users),Action(cancled / Not Action yet). 
+			    x] Contactus Queries:
+						a] Unread Query:
+								The query that send by the users that are not read by manager they are in unread query.
+						b] Read Query:
+								The query that send by the users that are read by the manager are in read query 
+								and also manager can give the reply to that query.
+			    xi] Doctor Session Logs:
+						In these manager can see the deatil of login and logout of doctors.
+						In the form of #,user id,username,user ip,login time,logout time,status(failed/success).
+
+			    xii] User Session Logs:
+						In these manager can see the deatil of login and logout of Users.
+						In the form of #,user id,username,user ip,login time,logout time,status(failed/success).
+			    xiii] Reports:
+						a] B/W Dates Reports:
+								 In these the manager can see the reports of patients by the dates from what date to to date.
+								 After submittion the manager can see the result and also can view the patients history.
+			    xiv] Patient Search:
+						The Manager can search the patients by Name or email. 
+						After the search the result is shown in these form i.e patient name , patient contact no., 
+						patient gender, creation date , updation date , action(edit/view).
+			
+				
+	    D] CONTACT:
+			    In the contact the user/patient/doctor can send description (query) if they want to send.
